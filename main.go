@@ -9,6 +9,10 @@ type Order struct {
 	Quantity int
 }
 
+func (o Order) getTotal() float64 {
+	return o.Price * float64(o.Quantity)
+}
+
 func main() {
 	a := 1
 	b := "b"
@@ -20,5 +24,5 @@ func main() {
 		Quantity: 5,
 	}
 
-	fmt.Println(a, b, c, order)
+	fmt.Println(a, b, c, order, order.getTotal())
 }
