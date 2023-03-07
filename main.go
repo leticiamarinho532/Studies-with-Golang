@@ -9,6 +9,7 @@ type Order struct {
 	Quantity int
 }
 
+// Metodo da strut Order
 func (o Order) getTotal() float64 {
 	return o.Price * float64(o.Quantity)
 }
